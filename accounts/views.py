@@ -1,4 +1,4 @@
-from rest_framework import APIView, status
+from rest_framework.views import APIView, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated ,AllowAny
 from rest_framework.authtoken.models import Token
@@ -90,7 +90,7 @@ class AccountDetailView(APIView):
 # ---------------------------
 # DEPOSTI VIEW
 # ---------------------------
-class CEpostView(APIView):
+class DepositView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self,request):

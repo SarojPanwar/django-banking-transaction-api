@@ -33,3 +33,7 @@ A REST API built with Django REST Framework for managing bank accounts and trans
 | POST | /api/account/withdraw/ | Withdraw money |
 | POST | /api/account/transfer/ | Transfer money |
 | GET | /api/account/transactions/ | Transaction history |
+
+## Testing
+A `test.http` file is included for testing API endpoints.
+Install **REST Client** extension in VS Code to use it.

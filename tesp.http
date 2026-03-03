@@ -1,0 +1,65 @@
+### Register
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username": "john",
+    "email": "john@example.com",
+    "password": "test1234",
+    "password2": "test1234"
+}
+
+### Login
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "test1234"
+}
+
+### Account Detail
+GET http://127.0.0.1:8000/api/account/
+Content-Type: application/json
+Authorization: Token your-token-here
+
+### Deposit
+POST http://127.0.0.1:8000/api/account/deposit/
+Content-Type: application/json
+Authorization: Token your-token-here
+
+{
+    "amount": "1000.00",
+    "description": "first deposit"
+}
+
+### Withdraw
+POST http://127.0.0.1:8000/api/account/withdraw/
+Content-Type: application/json
+Authorization: Token your-token-here
+
+{
+    "amount": "500.00",
+    "description": "ATM withdrawal"
+}
+
+### Transfer
+POST http://127.0.0.1:8000/api/account/transfer/
+Content-Type: application/json
+Authorization: Token your-token-here
+
+{
+    "amount": "200.00",
+    "target_account_number": "target-account-uuid-here",
+    "description": "sending money"
+}
+
+### Transaction History
+GET http://127.0.0.1:8000/api/account/transactions/
+Content-Type: application/json
+Authorization: Token your-token-here
+
+### Transaction History filtered by type
+GET http://127.0.0.1:8000/api/account/transactions/?type=deposit
+Content-Type: application/json
+Authorization: Token your-token-here
